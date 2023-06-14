@@ -1,7 +1,7 @@
 <template>
   <header class="flex justify-between items-center p-3 h-14 shadow bg-white">
     <button @click="emit('toggle-sidebar')"
-            class="flex items-center justify-center rounded transition-colors  text-gray-700 hover:bg-black/10">
+            class="flex items-center justify-center rounded w-8 h-8 transition-colors  text-gray-700 hover:bg-black/10">
       <MenuIcon class="w-6"/>
     </button>
     <Menu as="div" class="relative inline-block text-left">
