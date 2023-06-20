@@ -17,18 +17,26 @@ class CountrySeeder extends Seeder
      */
     public function run()
     {
-        $usaStates = [
-            "AL" => 'Alabama',
-            "AK" => 'Alaska',
-            "AZ" => 'Arizona',
-            "AR" => 'Arkansas',
-            "CA" => 'California',
+        $myStates = [
+            "JHR" => 'Johor',
+            "KDH" => 'Kedah',
+            "KTN" => 'Kelantan',
+            "MLK" => 'Melaka',
+            "NSN" => 'Negeri Sembilan',
+            "PHG" => 'Pahang',
+            "PNG" => 'Penang',
+            "PRK" => 'Perak',
+            "PLS" => 'Perlis',
+            "SBH" => 'Sabah',
+            "SWK" => 'Sarawak',
+            "SGR" => 'Selangor',
+            "TRG" => 'Terengganu',
+            "KUL" => 'Kuala Lumpur',
+            "LBN" => 'Labuan',
+            "PJY" => 'Putrajaya',
         ];
         $countries = [
-            ['code' => 'geo', 'name' => 'Georgia', 'states' => null],
-            ['code' => 'ind', 'name' => 'India', 'states' => null],
-            ['code' => 'usa', 'name' => 'United States of America', 'states' => json_encode($usaStates)],
-            ['code' => 'ger', 'name' => 'Germany', 'states' => null],
+            ['code' => 'my', 'name' => 'Malaysia', 'states' => json_encode($myStates)],
         ];
         Country::insert($countries);
     }

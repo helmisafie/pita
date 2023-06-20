@@ -4,13 +4,12 @@
         cartItemsCount: {{ \App\Helpers\Cart::getCartItemsCount() }},
     }"
     @cart-change.window="cartItemsCount = $event.detail.count"
-    class="flex justify-between bg-slate-800 shadow-md w-10 h-10 text-white">
-        <div class="px-4 py-4 relative flex">
-            <a href="{{ route('home') }}" class="text-3xl font-bold leading-none">
-                <img class="h-10" src="https://scontent.fkul13-1.fna.fbcdn.net/v/t39.30808-6/292227641_502749234985470_6689075554871964859_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Fc05i0nPHdsAX-WxerW&_nc_ht=scontent.fkul13-1.fna&oh=00_AfDjnZJnVFUX4cPj_jv4W52gzvHK_rPFu1QJe8Bwro_bwQ&oe=648CFBB3">
-            </a>
-        </div>
-            <!-- Responsive Menu -->
+    class="flex justify-between bg-slate-800 shadow-md text-white"
+>
+    <div>
+        <a href="{{ route('home') }}" class="block py-navbar-item pl-5">BMS</a>
+    </div>
+    <!-- Responsive Menu -->
     <div
         class="block fixed z-10 top-0 bottom-0 height h-full w-[220px] transition-all bg-slate-900 md:hidden"
         :class="mobileMenuOpen ? 'left-0' : '-left-[220px]'"

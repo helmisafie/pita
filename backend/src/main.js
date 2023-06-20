@@ -2,7 +2,7 @@ import {createApp} from 'vue'
 import store from './store'
 import router from './router'
 import './index.css';
-import currencyUSD from './filters/currency.js'
+import currencyMYR from './filters/currency.js'
 
 import App from './App.vue'
 
@@ -15,5 +15,5 @@ app
 ;
 
 app.config.globalProperties.$filters = {
-  currencyUSD
+  currencyMYR
 }

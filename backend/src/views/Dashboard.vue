@@ -61,7 +61,7 @@
           </p>
           <p class="flex justify-between">
             <span>{{ o.first_name }} {{ o.last_name }}</span>
-            <span>{{ $filters.currencyUSD(o.total_price) }}</span>
+            <span>{{ $filters.currencyMYR(o.total_price) }}</span>
           </p>
         </div>
       </template>
@@ -148,9 +148,9 @@ function updateDashboard() {
     loading.value.paidOrders = false;
   })
   axiosClient.get(`/dashboard/income-amount`, {params: {d}}).then(({data}) => {
-    totalIncome.value = new Intl.NumberFormat('en-US', {
+    totalIncome.value = new Intl.NumberFormat('en-MY', {
       style: 'currency',
-      currency: 'USD',
+      currency: 'MYR',
       minimumFractionDigits: 0
     })
       .format(data);
